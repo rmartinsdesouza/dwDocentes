@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="SOURCE RM BDSGE2"
+  DTS:DTSID="{E10EAFA6-8D97-4FB6-B97A-094DAE4889C6}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=//10.52.28.20:1521/bdsge2;User ID=rm;Provider=OraOLEDB.Oracle.1;Persist Security Info=True;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAmQZQ2LpUOkWqlqqQ1HzNAgAAAAACAAAAAAADZgAAwAAAABAAAACgrObqvZhpmvSqgaRDBrKHAAAAAASAAACgAAAAEAAAABQ6VX2Xr3ViufpLio54qUKAAAAAjKXhT6LZ3XJH3QeeOhqUYuUo4QXkfvXgq+x0sJ0GdBCK1lI+wQyZlrm5xqeiQCFw9EnfhXP4LV6ZXJMzap8oanO90asSftSKKwToR0YXbSFsD6ZJmp7R5n4Ls4FaLELSTssFPb/Lwr5Xc7EbV/OczFka8prF0Nh50pkstF8GrmUUAAAAtwxL1tYI6b6qfaOHPqV+CgVKdio=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

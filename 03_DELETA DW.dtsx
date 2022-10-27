@@ -1,0 +1,123 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/13/2021 3:25:22 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SRVHMLJOBSGE"
+  DTS:CreatorName="SFIEMT\RODRIGO.SOUZA"
+  DTS:DTSID="{F6E628D4-2D35-4915-A88A-F53ACBD222BD}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{E6E0B44E-BDD4-4721-8082-5159A1B554C2}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\CARREGA DADOS GENERICOS"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{11b68433-da1f-443c-a83a-b5e27e71586f}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="CARREGA DADOS GENERICOS"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5AF2B822-412A-4DCB-B0B9-BCB54C79EECC}"
+          SQLTask:SqlStatementSource="USE [DW]&#xA;GO&#xA;&#xA;INSERT INTO [dbo].[D_ALUNO]&#xA;           ([NK_CODCOLIGADA]&#xA;           ,[NK_RA]&#xA;           ,[NOME]&#xA;           ,[DTNASCIMENTO]&#xA;           ,[SEXO]&#xA;           ,[LN_DATA]&#xA;           ,[LN_ORIGEM]&#xA;           ,[LN_ATIVO])&#xA;     VALUES&#xA;           (99&#xA;           ,'99999999'&#xA;           ,'_NA_'&#xA;           ,'1900-01-01'&#xA;           ,'_NA_'&#xA;           ,'1900-01-01'&#xA;           ,'_NA_'&#xA;           ,1)&#xA;GO&#xA;&#xA;USE [DW]&#xA;GO&#xA;&#xA;INSERT INTO [dbo].[D_DOCENTE]&#xA;           ([NK_CODCOLIGADA]&#xA;           ,[NK_CODPROF]&#xA;           ,[NK_CODPESSOA]&#xA;           ,[NK_CODFILIAL]&#xA;           ,[NK_IDTURMADISC]&#xA;           ,[CPF]&#xA;           ,[NOME]&#xA;           ,[DT_ADMINISSAO]&#xA;           ,[CH_EXPEDIENTE]&#xA;           ,[LN_DATA]&#xA;           ,[LN_ORIGEM]&#xA;           ,[LN_ATIVO])&#xA;     VALUES&#xA;           (99&#xA;           ,99999999&#xA;           ,99999999&#xA;           ,'99'&#xA;           ,99999999&#xA;           ,99999999999&#xA;           ,'_NA_'&#xA;           ,'1900-01-01'&#xA;           ,99999999&#xA;           ,'1900-01-01'&#xA;           ,'_NA_'&#xA;           ,1)&#xA;GO&#xA;&#xA;USE [DW]&#xA;GO&#xA;&#xA;INSERT INTO [dbo].[D_MATRICULA]&#xA;           ([NK_CODCOLIGADA]&#xA;           ,[NK_CODFILIAL]&#xA;           ,[NK_IDPERLET]&#xA;           ,[NK_IDHABILITACAOFILIAL]&#xA;           ,[NK_CODGRADE]&#xA;           ,[NK_RA]&#xA;           ,[NK_IDTURMADISC]&#xA;           ,[NK_CODDISC]&#xA;           ,[DISCIPLINA]&#xA;           ,[LN_DATA]&#xA;           ,[LN_ORIGEM]&#xA;           ,[LN_ATIVO])&#xA;     VALUES&#xA;           (99&#xA;           ,99&#xA;           ,99999999&#xA;           ,99999999&#xA;           ,99999999&#xA;           ,99999999&#xA;           ,99999999&#xA;           ,99999999&#xA;           ,'_NA_'&#xA;           ,'1900-01-01'&#xA;           ,'_NA_'&#xA;           ,1)&#xA;GO&#xA;&#xA;&#xA;&#xA;&#xA;USE [DW]&#xA;GO&#xA;&#xA;INSERT INTO [dbo].[D_TEMPO]&#xA;           ([NK_DATA]&#xA;           ,[ANO]&#xA;           ,[MES]&#xA;           ,[DIA]&#xA;           ,[LN_DATA]&#xA;           ,[LN_ORIGEM]&#xA;           ,[LN_ATIVO])&#xA;     VALUES&#xA;           ('1900-01-01'&#xA;           ,'1900'&#xA;           ,'01'&#xA;           ,'01'&#xA;           ,'1900-01-01'&#xA;           ,'_NA_'&#xA;           ,1)&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\EXCLUI DW"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{a4e135f4-5d35-4cb0-b379-1f7a3ed8b459}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EXCLUI DW"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5AF2B822-412A-4DCB-B0B9-BCB54C79EECC}"
+          SQLTask:SqlStatementSource="USE [DW]&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_DESEMPENHO] DROP CONSTRAINT [FK_F_DESEMPENHO_D_MATRICULA]&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_DESEMPENHO] DROP CONSTRAINT [FK_F_DESEMPENHO_D_DOCENTE]&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_DESEMPENHO] DROP CONSTRAINT [FK_F_DESEMPENHO_D_ALUNO]&#xA;GO&#xA;&#xA;/****** Object:  Table [dbo].[F_DESEMPENHO]    Script Date: 13/01/2021 14:54:52 ******/&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[F_DESEMPENHO]') AND type in (N'U'))&#xA;DROP TABLE [dbo].[F_DESEMPENHO]&#xA;GO&#xA;&#xA;/****** Object:  Table [dbo].[F_DESEMPENHO]    Script Date: 13/01/2021 14:54:52 ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;&#xA;CREATE TABLE [dbo].[F_DESEMPENHO](&#xA; [SK_ALUNO] [int] NOT NULL,&#xA; [SK_DOCENTE] [int] NOT NULL,&#xA; [SK_MATRICULA] [int] NOT NULL,&#xA; [SK_TEMPO] [int] NOT NULL,&#xA; [QTD_PAH_PREVISTA] [decimal](18, 0) NOT NULL,&#xA; [QTD_PAH_REALIZADA] [decimal](18, 0) NOT NULL,&#xA; [LN_DATA] [datetime] NOT NULL,&#xA; [LN_ORIGEM] [nchar](20) NOT NULL,&#xA; [LN_ATIVO] [bit] NOT NULL&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_DESEMPENHO]  WITH CHECK ADD  CONSTRAINT [FK_F_DESEMPENHO_D_ALUNO] FOREIGN KEY([SK_ALUNO])&#xA;REFERENCES [dbo].[D_ALUNO] ([SK_ALUNO])&#xA;USE [DW]&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_DESEMPENHO] DROP CONSTRAINT [FK_F_DESEMPENHO_D_TEMPO]&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_DESEMPENHO] DROP CONSTRAINT [FK_F_DESEMPENHO_D_MATRICULA]&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_DESEMPENHO] DROP CONSTRAINT [FK_F_DESEMPENHO_D_DOCENTE]&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_DESEMPENHO] DROP CONSTRAINT [FK_F_DESEMPENHO_D_ALUNO]&#xA;GO&#xA;&#xA;/****** Object:  Table [dbo].[F_DESEMPENHO]    Script Date: 14/01/2021 11:26:42 ******/&#xA;IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[F_DESEMPENHO]') AND type in (N'U'))&#xA;DROP TABLE [dbo].[F_DESEMPENHO]&#xA;GO&#xA;&#xA;/****** Object:  Table [dbo].[F_DESEMPENHO]    Script Date: 14/01/2021 11:26:42 ******/&#xA;SET ANSI_NULLS ON&#xA;GO&#xA;&#xA;SET QUOTED_IDENTIFIER ON&#xA;GO&#xA;&#xA;CREATE TABLE [dbo].[F_DESEMPENHO](&#xA;&#x9;[SK_ALUNO] [int] NOT NULL,&#xA;&#x9;[SK_DOCENTE] [int] NOT NULL,&#xA;&#x9;[SK_MATRICULA] [int] NOT NULL,&#xA;&#x9;[SK_TEMPO] [int] NOT NULL,&#xA;&#x9;[QTD_PAH_PREVISTA] [decimal](18, 0) NOT NULL,&#xA;&#x9;[QTD_PAH_REALIZADA] [decimal](18, 0) NOT NULL,&#xA;&#x9;[LN_DATA] [datetime] NOT NULL,&#xA;&#x9;[LN_ORIGEM] [nchar](20) NOT NULL,&#xA;&#x9;[LN_ATIVO] [bit] NOT NULL,&#xA; CONSTRAINT [PK_F_DESEMPENHO] PRIMARY KEY CLUSTERED &#xA;(&#xA;&#x9;[SK_ALUNO] ASC,&#xA;&#x9;[SK_DOCENTE] ASC,&#xA;&#x9;[SK_MATRICULA] ASC,&#xA;&#x9;[SK_TEMPO] ASC&#xA;)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]&#xA;) ON [PRIMARY]&#xA;GO&#xA;&#xA;&#xA;&#xA;DELETE D_ALUNO&#xA;DELETE D_DOCENTE&#xA;DELETE D_MATRICULA&#xA;DELETE D_PAH_DIARIA&#xA;DELETE D_TEMPO&#xA;&#xA;&#xA;&#xA;&#xA;ALTER TABLE [dbo].[F_DESEMPENHO]  WITH CHECK ADD  CONSTRAINT [FK_F_DESEMPENHO_D_ALUNO] FOREIGN KEY([SK_ALUNO])&#xA;REFERENCES [dbo].[D_ALUNO] ([SK_ALUNO])&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_DESEMPENHO] CHECK CONSTRAINT [FK_F_DESEMPENHO_D_ALUNO]&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_DESEMPENHO]  WITH CHECK ADD  CONSTRAINT [FK_F_DESEMPENHO_D_DOCENTE] FOREIGN KEY([SK_DOCENTE])&#xA;REFERENCES [dbo].[D_DOCENTE] ([SK_DOCENTE])&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_DESEMPENHO] CHECK CONSTRAINT [FK_F_DESEMPENHO_D_DOCENTE]&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_DESEMPENHO]  WITH CHECK ADD  CONSTRAINT [FK_F_DESEMPENHO_D_MATRICULA] FOREIGN KEY([SK_MATRICULA])&#xA;REFERENCES [dbo].[D_MATRICULA] ([SK_MATRICULA])&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_DESEMPENHO] CHECK CONSTRAINT [FK_F_DESEMPENHO_D_MATRICULA]&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_DESEMPENHO]  WITH CHECK ADD  CONSTRAINT [FK_F_DESEMPENHO_D_TEMPO] FOREIGN KEY([SK_TEMPO])&#xA;REFERENCES [dbo].[D_TEMPO] ([SK_TEMPO])&#xA;GO&#xA;&#xA;ALTER TABLE [dbo].[F_DESEMPENHO] CHECK CONSTRAINT [FK_F_DESEMPENHO_D_TEMPO]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{fb725a01-a481-455f-b565-a39776db555b}"
+      DTS:From="Package\EXCLUI DW"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\CARREGA DADOS GENERICOS" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="244,42"
+          Id="Package\CARREGA DADOS GENERICOS"
+          TopLeft="60,157" />
+        <NodeLayout
+          Size="140,42"
+          Id="Package\EXCLUI DW"
+          TopLeft="84,60" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="154,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="28,55"
+              Start="0,0"
+              End="28,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.5"
+                    Point2="0,27.5"
+                    Point3="4,27.5" />
+                  <mssgle:LineSegment
+                    End="24,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24,27.5"
+                    Point2="28,27.5"
+                    Point3="28,31.5" />
+                  <mssgle:LineSegment
+                    End="28,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
